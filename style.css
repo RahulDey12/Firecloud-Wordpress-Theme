@@ -1,0 +1,324 @@
+/*
+Theme Name: Fire Cloud
+Author: Rahul Dey
+Author URI: https://facebook.com/iamrahuldey
+Version: 1.0
+Description: We are a theme development company and this is our first theme, so stay tune we will give a good description.
+*/
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Expletus+Sans:600|PT+Mono|Roboto:100,300,400');
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	        clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	-webkit-clip-path: none;
+	        clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/*
+* #.Default Styles
+*
+*/
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* Buttons */
+button,
+input[type=submit] {
+    background: #2196ff;
+    text-align: center;
+    border: transparent;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 3px;
+    white-space: nowrap;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+button:hover,
+button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+    background: #137bd9;
+}
+
+.fc-btn {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    text-align: left;
+    line-height: 60px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #222;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.fc-btn svg,
+.fc-btn svg rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+}
+
+.fc-btn svg rect {
+    stroke: #222;
+    stroke-width: 4;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    stroke-dasharray: 500,500;
+    stroke-dashoffset: 0;
+}
+
+.fc-btn:hover {
+    color: #222;
+    text-decoration: none;
+}
+
+.fc-btn:hover svg rect {
+    stroke-dasharray: 80,400;
+    stroke-dashoffset: 215;
+    stroke: #00bcd4;
+}
+
+/* Sections */
+.fc-about-sec h2,
+.fc-recent-post-sec h2 {
+    font-family: 'PT Mono', monospace;
+    font-size: 2.5em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 63px;
+}
+
+.fc-about-sec h2::after,
+.fc-recent-post-sec h2::after {
+    content: "";
+    width: 9%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-top: 8px;
+}
+
+/*
+* #.About Secton
+*
+*/
+
+.fc-about-sec p {
+    color: #686868;
+}
+
+.fc_theme_footer {
+    display: block;
+    min-height: 10px;
+    background: #ededed;
+}
+
+.fc_footer_copyright {
+    padding: 20px 8px;
+}
+
+.fc_footer_copyright p {
+    float: left;
+    text-transform: uppercase;
+    color: #585454;
+}
+
+/*
+* #.Recent Blog Secton
+*
+*/
+
+.fc-recent-blog-content {
+    border: 1px solid #d0d0d0;
+    -webkit-box-shadow: 4px 5px 10px 1px #00000047;
+            box-shadow: 4px 5px 10px 1px #00000047;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.fc-recent-blog-content:hover {
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.fc-recent-blog-head {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.fc-recent-blog-head a {
+    color: #535353;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.fc-recent-blog-head a:hover {
+    color: #888;
+    text-decoration: none;
+}
+
+.fc-recent-blog-comment a {
+    color: #222;
+}
+
+.fc-recent-blog-comment a:hover {
+    color: #585757;
+    text-decoration: none;
+}
+
+/*
+*#.Counter Section
+*
+*/
+
+.fc-counter-sec {
+    background: url('assets/img/counter-background.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 250px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.counter-icon,
+.counter-number {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.counter-number {
+    font-size: 2.5em;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
