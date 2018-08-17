@@ -33,9 +33,11 @@
     endif;
     add_action('after_setup_theme', 'firecloud_setup');
 
+    //Scrips
     function firecloud_all_scripts() {
         //All Stylesheets
         wp_enqueue_style('main-style', get_template_directory_uri().'/style.css',false, "1.0");
+        wp_enqueue_style('Basic Styles', get_template_directory_uri().'/assets/css/basic.css',false, "1.0");
         wp_enqueue_style('owl-carousel-css', get_template_directory_uri().'/assets/css/owl.carousel.min.css',false, "1.0");
         //All Javascripts
         wp_enqueue_script('owl-carousel-js', get_template_directory_uri().'/assets/js/owl.carousel.min.js', array(), '1.0', true);
@@ -69,5 +71,14 @@
 
 
     add_action('customize_register', 'fc_customize_register');
-    add_action('wp_head', 'fc_custom_css');
+    add_action('wp_head', 'fc_custom_head');
+
+    //Beta Alert
+    function beta_alert() { ?>
+        <div class="notice notice-success is-dismissible">
+            <p><?php _e('You Have Installed Beta Version Of FireCloud Awesome !!', 'Firecloud_notice') ?></p>
+        </div>
+    <?php }
+
+    add_action ('admin_notices', 'beta_alert');
 ?>

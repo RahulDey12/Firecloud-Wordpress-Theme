@@ -1,3 +1,4 @@
+</div>
 <footer class="fc_theme_footer container-fluid">
 	<div class="fc_footer_copyright row">
 		<p>&copy;
@@ -9,7 +10,8 @@
 		<p>wordpress theme Designed and developed by <span><a href="https://www.facebook.com/IamRahulDey">Rahul Dey</a></span></p>
 	</div>
 </footer>
-		<?php wp_footer(); ?>
-	</div>
+
+	<?php wp_footer(); ?>
+
 </body>
 </html>

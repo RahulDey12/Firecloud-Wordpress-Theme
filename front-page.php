@@ -26,7 +26,8 @@
                     'post_type' => 'post',
                     'order'     =>  'DESC',
                     'posts_per_page'    =>  3,
-                    'post_status'   =>  'publish'
+                    'post_status'   =>  'publish',
+                    'has_password' => false
                 );
 
                 $query = new WP_Query($args);

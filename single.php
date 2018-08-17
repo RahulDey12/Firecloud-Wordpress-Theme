@@ -1,27 +1,34 @@
 <?php get_header(); ?>
 
-    <div class="more-post-container">
-        <?php
-            $postid = get_the_ID();
-            $more_post_location = home_url('/wp-json/wp/v2/posts?exclude='.$postid.'&per_page=3');
-            $more_post_json_file = file_get_contents($more_post_location);
+    <?php if(is_single()): ?>
 
-            $more_posts_array = json_decode($more_post_json_file, true);
+        <div class="container-fluid post-container">
+            <div class="row">
+                <div class="post-header py-4">
+                    <!-- Title -->
+                    <h1><?php the_title(); ?></h1>
+                </div>
+                <div class="col-12 col-lg-9 col-xl-10">
+                    <?php if(have_posts()): ?>
+                        <?php while(have_posts()): the_post(); ?>
+                            <?php
+                                if(has_post_thumbnail()) {
+                                    the_post_thumbnail( $size = 'full', ['class' => 'img-fluid my-3', 'alt' => get_the_title()] );
+                                }
+                            ?>
+                            <!-- Post Meta -->
+                            <div class="post-meta">
+                                <p>By <a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author() ?></a> | On <?php the_date() ?></p>
+                            </div>
+                            <div <?php post_class() ?>>
+                                <?php the_content() ?>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
 
-            $a = 0;
-            while ($a < sizeof($more_posts_array)) :
-                //Variables
-                $more_post_var = $more_posts_array[$a]['id'];
-                $more_post_title = $more_posts_array[$a]['title']['rendered'];
-                get_comments_number( $more_posts_array[$a]['id'] );?>
+    <?php endif; ?>
 
-                    
-
-                <?php $a++;
-            endwhile;
-
-        ?>
-    </div>
-
-
-<?php get_footer() ?>
+<?php get_footer(); ?>

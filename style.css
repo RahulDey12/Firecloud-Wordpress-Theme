@@ -4,12 +4,23 @@ Author: Rahul Dey
 Author URI: https://facebook.com/iamrahuldey
 Version: 1.0
 Description: We are a theme development company and this is our first theme, so stay tune we will give a good description.
+License: GNU General Public License v3
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 */
 
 /* =WordPress Core
 -------------------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css?family=Expletus+Sans:600|PT+Mono|Roboto:100,300,400');
+
+a {
+    color: #ff4c3b;
+}
+
+a:hover {
+    color: #ec2f1d;
+    text-decoration: none;
+}
 
 .alignnone {
     margin: 5px 20px 20px 0;
@@ -145,6 +156,7 @@ input[type=submit] {
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 button:hover,
